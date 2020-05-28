@@ -58,7 +58,7 @@ def draw_graph(fn, arr):
 def predict_file(path):
     frames=ext_frames(path,350)
     test_generator=t_generator(frames)
-    model=MODEL.load_model('irv2.h5')
+    model=MODEL.load_model('model.h5')
     result=model.predict(test_generator)
     #print(1)
     draw_graph(path, result)
