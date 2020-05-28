@@ -17,3 +17,5 @@ Running with an example video will return 'True' with the graph below.
 `$ python predict.py example-video/2018-04-29-114407350.webm`  
 <img src="https://github.com/u0953009/images/blob/master/video/Figure_1.png">    
 
+The classifier judges as successful when the output value is less than 0.5. Otherwise, the classifier judges as unsuccessful.  
+The output values greater than or equal to 0.5 are red marks, and the output values less than 0.5 are blue marks.   
