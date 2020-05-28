@@ -1,4 +1,5 @@
 import os
+import sys
 from tensorflow.keras import models as MODEL
 import cv2
 import numpy as np
@@ -22,7 +23,6 @@ def t_generator(arr):
     test_generator= train_datagen.flow(
         arr,
         shuffle=False,
-        #target_size=(pixel,pixel),
         batch_size=1000)
     return test_generator
 
@@ -43,17 +43,14 @@ def predict(arr):
 
 def draw_graph(fn, arr):
     x=np.linspace(0, len(arr)/30.0, len(arr))
-    #y=np.asarray(lst)
     y=arr
     ne=np.ma.masked_where(y>=0.5, y)
     po=np.ma.masked_where(y<0.5, y)
     plt.plot(x,ne,'bo',x,po,'ro',markersize=1.6)
-    plt.title(fn)
+    file_name= fn.split('/')[-1]
+    plt.title(file_name)
     plt.xlabel('elapsed time in sec')
     plt.ylabel('value')
-    #plt.savefig('plots/'+fn+'.png')
-    #print('plots/'+fn+'.png')
-    #plt.figure()
     plt.show()
     plt.clf()
 
@@ -69,8 +66,10 @@ def predict_file(path):
   
     return rst
     
-#path='C:\\Users\\u0953009\\Desktop\\school\\classfier\\video\\2\\2018-04-29-114407350.webm'
-#path='C:/Users/u0953009/Desktop/school/classfier/video/2/2018-04-29-114407350.webm'
 
-#print(predict_file(path))
-
+def main(arg):
+    print(predict_file(arg))
+    
+if __name__ == "__main__":
+    main(sys.argv[1])
+    
