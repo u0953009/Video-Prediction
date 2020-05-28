@@ -5,7 +5,8 @@
 
 # Installation
 1. Clone this repository.  
-2. Download https://drive.google.com/open?id=1hsHdJEUlV6NH4cqraq9sL9S0YpTrmgZt and include it in the same directory as this repository was cloned.  
+2. Download the model in this link, https://drive.google.com/open?id=1_rVIcU6sBRS321dwnTO3htf83C7p3jY3, and include it in the same directory as this repository was cloned.  
+    - This model was built on a pre-trained model Inception ResNet V2. Details are discussed in https://github.com/u0953009/Binary-Classifier.  
 3. Install requirements. `pip install -r requirements.txt`  
 
 # Usage  
