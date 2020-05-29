@@ -1,4 +1,4 @@
-# Video-Prediction  
+# Binary Classifier Using Experiment Videos for Examining Robotic Grasp Success  
 - This app takes, as a parameter, a path of a video in which the robotic hand tries to grasp an object.   
 - This app uses a CNN to classify each frame in a video into a successful try or not.  
 - If frames in the last few seconds are classified as successful, it returns True with a graph which shows the value of each frame after being classified. Otherwise, it returns False with a graph.  
